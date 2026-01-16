@@ -1,13 +1,12 @@
-# Task 2: Simple Website Using HTML, CSS & JavaScript
+#  Simple Website Using HTML, CSS ,Tailwind via CDN &  Vnilla JavaScript
 
-## 1. Project Title
-**Simple Responsive Website Using HTML, CSS & Vanilla JavaScript**
 
-## 2. Task Summary
+
+## . Task Summary
 This project is a simple website built using **HTML, CSS, and vanilla JavaScript** without any frameworks.  
 The main goal was to implement at least **two sections** (Hero Section + Content/Feature Section) and include **interactive elements** while ensuring a fully responsive layout.
 
-## 3. Features / Functionality
+## . Features / Functionality
 The website includes the following functionality:
 
 1. **Responsive Navigation Menu**  
@@ -26,15 +25,25 @@ The website includes the following functionality:
 
 6. Vanilla JavaScript logic is simple, clear, and functional.
 
-## 4. Tech Stack
+## . Tech Stack
 - **HTML5**  
-- **CSS3** (You may use Tailwind CDN or Bootstrap CDN for styling)  
+- **CSS3**  
+- **Tailiwnd Css (Via CDN)**  
 - **Vanilla JavaScript**  
 - **SweetAlert2** (for form submission success alerts)
 
-## 5. Installation / Usage Steps
+## . Installation / Usage Steps
 
 **Step 1: Clone or Download the Project**  
 Clone the project to your local machine or download it as a ZIP:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/khalidhossain5000/simple-website-raw-code-part.git
+cd simple-website-raw-code-part.
+
+
+2.Install dependencies
+
+```bash
+run the index.html file and view the project
+
+```
