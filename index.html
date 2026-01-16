@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Simple website layout using Raw Html css and vanilla js and Tailwind
+    </title>
+
+    <!-- tailwind cdn setup here -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome icon setup -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- css file -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="inter">
+    <!-- header and nav bar starts here -->
+    <header class="fixed left-0 w-full top-0 z-50 backdrop-blur-md bg-white/10">
+      <div class="container mx-auto flex items-center justify-between py-4">
+        <div class="logo">
+          <img
+            src="./assets/logo/logo.png"
+            alt="website logo"
+            class="w-40 lg:w-full"
+          />
+        </div>
+
+        <nav
+          class="menu hidden lg:block absolute lg:static top-16 left-0 w-full lg:w-auto bg-blue-500 lg:bg-transparent max-h-0 opacity-0 transition duration-0 lg:max-h-full lg:opacity-100 lg:overflow-visible"
+          id="mobileMenu"
+        >
+          <ul id="menu" class="flex flex-col lg:flex-row p-6 lg:p-0 gap-8">
+            <li class="font-xl">Home</li>
+            <li class="font-inter font-xl font-[400] flex items-center gap-1">
+              About
+              <span
+                class="w-4 h-4 transition-transform group-hover:rotate-180 -mt-2"
+                ><i class="fa-solid fa-chevron-down"></i
+              ></span>
+            </li>
+            <li class="font-xl font-[400]">Services</li>
+            <li class="font-xl font-[400]">SEO Case Study</li>
+            <li class="font-xl font-[400]">Contact Us</li>
+          </ul>
+        </nav>
+        <div class="btn hidden lg:block">
+          <button class="btn-global hover:bg-red-900 transiton duration-300">
+            <span><i class="fa-solid fa-phone"></i></span> +8801404552727
+          </button>
+        </div>
+        <!-- mobile responsive menu starts here -->
+        <div class="lg:hidden">
+          <button class="" id="hamburger">
+            <i class="fa-solid fa-bars text-4xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Banner part of the section starts here -->
+    <section>
+      <section
+        class="min-h-screen bg-cover bg-center pt-40 pb-24 md:py-40 md:pt-0 lg:py-48 px-2 lg:px-4"
+        style="background-image: url('./assets/banner/section-bg.png')"
+      >
+        <div
+          class="container mx-auto flex flex-col justify-between lg:flex-row items-center gap-14"
+        >
+          <!-- Right side title and subtitle -->
+          <div class="title-subtitle lg:flex-1 text-center lg:text-left">
+            <div class="titles relative">
+              <h1
+                class="dm-sans text-4xl md:text-6xl lg:text-5xl xl:text-[80px] font-bold text-[#060606]"
+              >
+                Digital Marketing Agency in Bangladesh
+              </h1>
+              <img
+                src="./assets/banner/content-shape.png"
+                alt="title-shape-frame"
+                class="hidden lg:absolute -top-2 right-6"
+              />
+            </div>
+            <p
+              class="text-[#65758B] font-normal text-sm xl:text-lg max-w-2xl py-6 mb-5 mx-auto lg:mx-0"
+            >
+              Khan IT (led by SEO expert Md Faruk Khan) helps businesses get
+              150% more leads and 2.5x higher conversions through integrated
+              digital marketing and web design.
+            </p>
+            <div class="text-center lg:text-left">
+              <button
+                class="bg-blue-600 text-white text-lg px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+              >
+                Book Your Free Consultation
+              </button>
+            </div>
+          </div>
+
+          <!-- Left side cards -->
+          <div class="card-container lg:flex-1 flex flex-col gap-6">
+            <!-- Card 1 & 2 container -->
+            <div class="card-icontainer lg:flex gap-6 items-center">
+              <!-- Card 1 -->
+              <div
+                class="cardi self-start bg-gradient-to-br from-[#eaedff] to-[#f9effb] p-6 rounded-3xl border border-[#B4D5F9] space-y-2 lg:flex-1 text-center lg:text-left"
+              >
+                <img
+                  src="./assets/banner/rocket.png"
+                  alt="Rocket"
+                  class="mx-auto lg:mx-0 w-12 h-12"
+                />
+                <div
+                  class="flex items-center justify-center lg:justify-start pt-2 xl:pt-4 gap-2"
+                >
+                  <h2
+                    class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#060606]"
+                  >
+                    200%
+                  </h2>
+                  <img
+                    src="./assets/banner/Conversions Arrow.png"
+                    alt="Arrow"
+                    class="w-12 h-12"
+                  />
+                </div>
+                <h5 class="font-semibold text-[#06060680] text-[16px]">
+                  More Conversion
+                </h5>
+                <h6 class="font-regular text-[#06060670] text-[14px]">
+                  Than Industry Average
+                </h6>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="relative flex-1 cardii bg-gradient-to-br from-[#C4DBF5] to-[#ECF1F8] p-6 rounded-3xl border border-[#B4D5F9] lg:translate-y-9 mb-6 mt-6 lg:mt-0"
+              >
+                <h2
+                  class="text-lg font-bold text-[#060606] text-center lg:text-left"
+                >
+                  Our Track Record
+                </h2>
+                <div
+                  class="shape bg-[#dae7f6] absolute top-0 right-0 rounded-3xl p-2"
+                >
+                  <img
+                    src="./assets/banner/track-record-card-shape.png"
+                    alt="shape"
+                    class="w-20 lg:w-22"
+                  />
+                </div>
+
+                <!-- Stats -->
+                <div
+                  class="bg-white/60 border border-[#B4D5F9] rounded-2xl flex gap-5 items-center px-5 py-2 shadow-sm mt-3"
+                >
+                  <span
+                    class="bg-[#d0e4fa] text-primary text-3xl p-3 rounded-full"
+                    ><i class="fas fa-users"></i
+                  ></span>
+                  <h2 class="text-lg font-bold text-[#060606]">
+                    150
+                    <span class="text-[#65758b] text-sm font-medium ml-2"
+                      >Clients</span
+                    >
+                  </h2>
+                </div>
+                <div
+                  class="bg-white/60 border border-[#B4D5F9] rounded-2xl flex gap-5 items-center px-5 py-2 shadow-sm mt-3"
+                >
+                  <span
+                    class="bg-[#d0e4fa] text-primary text-3xl p-3 rounded-full"
+                    ><i class="fas fa-chart-line"></i
+                  ></span>
+                  <h2 class="text-lg font-bold text-[#060606]">
+                    200+
+                    <span class="text-[#65758b] text-sm font-medium ml-2"
+                      >Projects</span
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 & 4 container -->
+            <div class="card-3-4-container lg:flex items-center gap-6">
+              <!-- Card 3 -->
+              <div class="cardiii flex-1 lg:-translate-y-14">
+                <a
+                  href="https://www.youtube.com/watch?v=KLuTLF3x9sA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="relative block w-full h-[235px] rounded-xl overflow-hidden cursor-pointer group"
+                >
+                  <img
+                    src="./assets/banner/thumbanil-imgs.png"
+                    alt="Video Thumbnail"
+                    class="w-full h-full object-cover"
+                  />
+
+                  <div
+                    class="absolute inset-0 bg-linear-to-t from-[#0F1729CC] via-[#0F172920]to-[#0F1729]"
+                  ></div>
+
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div
+                      class="w-14 h-14 bg-[#863cbf] rounded-full flex items-center justify-center text-white text-3xl group-hover:scale-110 transition"
+                    >
+                      <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                  </div>
+
+                  <div class="absolute bottom-3 left-5 text-white">
+                    <div class="flex items-center gap-2 mb-1">
+                      <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                      <span class="font-medium text-sm">Watch Case Study</span>
+                    </div>
+                    <p class="text-sm font-regular text-[#CCCCCC]">2:45 min</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 4 -->
+              <div
+                class="cardii bg-gradient-to-br from-[#FEEFDB] to-[#FCF2F2] p-6 rounded-3xl border border-[#FDE1BF] flex-1 relative mt-9"
+              >
+                <img
+                  src="./assets/banner/walton-logo.png"
+                  alt="walton logo"
+                  class="w-16 h-12"
+                />
+                <div class="flex items-center flex-wrap py-5 gap-1">
+                  <i class="fas fa-star text-[#f45925] text-xl"></i>
+                  <i class="fas fa-star text-[#f45925] text-xl"></i>
+                  <i class="fas fa-star text-[#f45925] text-xl"></i>
+                  <i class="fas fa-star text-[#f45925] text-xl"></i>
+                  <i class="fas fa-star text-[#f45925] text-xl"></i>
+                </div>
+                <p class="text-[#060606] font-medium text-lg">
+                  &ldquo;Their marketing strategies are simply
+                  outstanding&ldquo;
+                </p>
+                <div
+                  class="blockquot bg-[#fdeade] absolute top-0 right-0 p-2 rounded-lg"
+                >
+                  <img
+                    src="./assets/banner/backtick.png"
+                    alt="quote"
+                    class="w-16 h-12"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- services section starts here  -->
+    <section class="py-6 lg:py-30 bg-[#ffffff] px-2 lg:px-4">
+      <div class="container mx-auto">
+        <!-- Section badge -->
+        <div class="text-center">
+          <p
+            class="bg-[#F0F7FF] py-2 px-4 rounded-full text-[#0271E8E8] text-sm font-medium inline-block"
+          >
+            Our Services
+          </p>
+        </div>
+
+        <!-- Title -->
+        <h1
+          class="dm-sans text-center text-3xl lg:text-5xl font-bold text-[#060606] mt-6 mb-5"
+        >
+          Full-stack Digital Marketing Services
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-center text-lg font-regular text-[#65758B]">
+          We manage your complete digital presence so you can focus on your core
+          business.
+        </p>
+
+        <!-- Services Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-16"
+        >
+          <!-- Card 1 -->
+          <div
+            class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left"
+          >
+            <img
+              src="./assets/services/seo.png"
+              alt="SEO Service"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-[#060606] mt-6 mb-3 text-xl md:text-2xl font-semibold"
+            >
+              SEO Service
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#65758B] font-regular">
+              Improve Google rankings and gain consistent, long-term traffic.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left"
+          >
+            <img
+              src="./assets/services/web.png"
+              alt="Web Design"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-[#060606] mt-6 mb-3 text-xl md:text-2xl font-semibold"
+            >
+              Web Design
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#65758B] font-regular">
+              Create websites that convert visitors into customers.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left"
+          >
+            <img
+              src="./assets/services/facebook.png"
+              alt="Facebook Ads"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-[#060606] mt-6 mb-3 text-xl md:text-2xl font-semibold"
+            >
+              Facebook Ads
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#65758B] font-regular">
+              Connect with your target audience on their preferred platforms.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left"
+          >
+            <img
+              src="./assets/services/google.png"
+              alt="Google Ads"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-[#060606] mt-6 mb-3 text-xl md:text-2xl font-semibold"
+            >
+              Google Ads
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#65758B] font-regular">
+              Reach customers actively searching for your services.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left"
+          >
+            <img
+              src="./assets/services/content.png"
+              alt="Content Writing"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-[#060606] mt-6 mb-3 text-xl md:text-2xl font-semibold"
+            >
+              Content Writing
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#65758B] font-regular">
+              Build trust and improve Google rankings with compelling content.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left"
+          >
+            <img
+              src="./assets/services/branding.png"
+              alt="Branding"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-[#060606] mt-6 mb-3 text-xl md:text-2xl font-semibold"
+            >
+              Branding
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#65758B] font-regular">
+              Differentiate your business and build customer loyalty.
+            </p>
+          </div>
+
+          <!-- Card 7 -->
+          <div
+            class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left"
+          >
+            <img
+              src="./assets/services/uiux.png"
+              alt="UI/UX Design"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-[#060606] mt-6 mb-3 text-xl md:text-2xl font-semibold"
+            >
+              UI/UX Design
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#65758B] font-regular">
+              Design user experiences that increase conversions.
+            </p>
+          </div>
+
+          <!-- Card 8 -->
+          <div
+            class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left"
+          >
+            <img
+              src="./assets/services/graphics.png"
+              alt="Graphic Design"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-[#0271E8E8] mt-6 mb-3 text-xl md:text-2xl font-semibold"
+            >
+              Graphic Design
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#65758B] font-regular">
+              Develop professional visuals to enhance trust and credibility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why choose us section starts here -->
+    <section class="py-6 lg:py-30 bg-[#121C39] px-2 lg:px-4">
+      <div class="container mx-auto">
+        <!-- Badge -->
+        <div class="text-center">
+          <p
+            class="bg-[#0271E833] py-2 px-4 rounded-full text-[#060606] text-sm font-medium inline-block"
+          >
+            Our Services
+          </p>
+        </div>
+
+        <!-- Title -->
+        <h1
+          class="dm-sans text-center text-3xl lg:text-5xl font-bold text-white mt-6 mb-5"
+        >
+          Why 100+ Businesses Choose Khan IT
+        </h1>
+
+        <!-- Subtitle -->
+        <p
+          class="max-w-[650px] mx-auto text-center text-lg font-regular text-[#65758B]"
+        >
+          You have options. So why do so many businesses in Bangladesh choose
+          Khan IT? Simple — we deliver real results, not buzzwords.
+        </p>
+
+        <!-- Cards -->
+        <div
+          class="pt-16 pb-24 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6"
+        >
+          <!-- Card 1 -->
+          <div
+            class="px-6 py-[51px] bg-[#3399FF0D] border border-[#F8FAFC1A] shadow-sm rounded-[20px] hover:bg-[#3399FF1A] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left group"
+          >
+            <img
+              src="./assets/whychooseusicon/i.png"
+              alt="icon"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-white mt-6 mb-3 text-xl md:text-2xl font-semibold group-hover:text-[#0271E8E8] transition duration-300"
+            >
+              Expert-Led by a Proven SEO Specialist
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#CBD5E1] font-regular">
+              Khan IT is founded and led by Md Faruk Khan, a certified SEO
+              expert with over 10 years of experience and more than 8,000
+              trained professionals.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="px-6 py-[51px] bg-[#3399FF0D] border border-[#F8FAFC1A] shadow-sm rounded-[20px] hover:bg-[#3399FF1A] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left group"
+          >
+            <img
+              src="./assets/whychooseusicon/ii.png"
+              alt="icon"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-white mt-6 mb-3 text-xl md:text-2xl font-semibold group-hover:text-[#0271E8E8] transition duration-300"
+            >
+              Specialized in What Works
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#CBD5E1] font-regular">
+              We specialize in digital marketing and web design. This focus
+              enables faster delivery, higher quality, and stronger ROI.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="px-6 py-[51px] bg-[#3399FF0D] border border-[#F8FAFC1A] shadow-sm rounded-[20px] hover:bg-[#3399FF1A] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left group"
+          >
+            <img
+              src="./assets/whychooseusicon/iii.png"
+              alt="icon"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-white mt-6 mb-3 text-xl md:text-2xl font-semibold group-hover:text-[#0271E8E8] transition duration-300"
+            >
+              Transparent Pricing
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#CBD5E1] font-regular">
+              You will always know exactly what you are paying for, with clear
+              pricing, no hidden fees, and flexible packages.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="px-6 py-[51px] bg-[#3399FF0D] border border-[#F8FAFC1A] shadow-sm rounded-[20px] hover:bg-[#3399FF1A] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left group"
+          >
+            <img
+              src="./assets/whychooseusicon/iv.png"
+              alt="icon"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-white mt-6 mb-3 text-xl md:text-2xl font-semibold group-hover:text-[#0271E8E8] transition duration-300"
+            >
+              Proven, Measurable Results
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#CBD5E1] font-regular">
+              Our clients experience an average 150% increase in inquiries and a
+              higher conversion rate with a 4.8/5 satisfaction rating.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="px-6 py-[51px] bg-[#3399FF0D] border border-[#F8FAFC1A] shadow-sm rounded-[20px] hover:bg-[#3399FF1A] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left group"
+          >
+            <img
+              src="./assets/whychooseusicon/v.png"
+              alt="icon"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-white mt-6 mb-3 text-xl md:text-2xl font-semibold group-hover:text-[#0271E8E8] transition duration-300"
+            >
+              AI-First, Data-Driven Approach
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#CBD5E1] font-regular">
+              We utilize AI and real-world data to inform marketing decisions.
+              Every campaign is meticulously designed.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="px-6 py-[51px] bg-[#3399FF0D] border border-[#F8FAFC1A] shadow-sm rounded-[20px] hover:bg-[#3399FF1A] hover:border-[#0271E8E8] transition-all duration-500 text-center md:text-left group"
+          >
+            <img
+              src="./assets/whychooseusicon/vi.png"
+              alt="icon"
+              class="w-14 h-14 mx-auto md:mx-0"
+            />
+            <h2
+              class="text-white mt-6 mb-3 text-xl md:text-2xl font-semibold group-hover:text-[#0271E8E8] transition duration-300"
+            >
+              Full-Stack Digital Marketing
+            </h2>
+            <p class="text-sm md:text-[16px] text-[#CBD5E1] font-regular">
+              Our SEO, advertising, content, design, and branding services work
+              together as a cohesive system.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- stats data section starts here -->
+ <section class="py-6 lg:py-30 bg-[#F1F5F966] px-2 lg:px-4">
+  <div class="container mx-auto">
+    <!-- badge -->
+    <div class="text-center">
+      <p class="bg-[#F0F7FF] py-2 px-4 rounded-full text-[#0271E8] text-sm font-medium inline-block">
+        Proven Results
+      </p>
+    </div>
+
+    <!-- title -->
+    <h2 class="mt-6 mb-5 text-center text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">
+      Results That Speak for Themselves
+    </h2>
+
+    <!-- subtitle -->
+    <p class="text-center text-lg font-normal text-[#65758B]">
+      We focus on measurable outcomes that directly impact your bottom line.
+    </p>
+
+    <!-- stats cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto gap-6 pt-16">
+
+      <!-- card 1 -->
+      <div class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8] transition-all duration-500 text-center">
+        <img src="./assets/stats-icon/i.png" alt="stat icon" class="mx-auto w-16 h-16" />
+        <h2 class="text-[#F97015] mt-6 mb-3 text-2xl md:text-3xl lg:text-5xl font-bold">
+          150%
+        </h2>
+        <p class="text-sm text-[#65758B]">
+          Average Increase in Online Inquiries
+        </p>
+      </div>
+
+      <!-- card 2 -->
+      <div class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8] transition-all duration-500 text-center">
+        <img src="./assets/stats-icon/ii.png" alt="stat icon" class="mx-auto w-16 h-16" />
+        <h2 class="text-[#14B884] mt-6 mb-3 text-2xl md:text-3xl lg:text-5xl font-bold">
+          2.5X
+        </h2>
+        <p class="text-sm text-[#65758B]">
+          Higher Conversion Rates
+        </p>
+      </div>
+
+      <!-- card 3 -->
+      <div class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8] transition-all duration-500 text-center">
+        <img src="./assets/stats-icon/iii.png" alt="stat icon" class="mx-auto w-16 h-16" />
+        <h2 class="text-[#3B79F6] mt-6 mb-3 text-2xl md:text-3xl lg:text-5xl font-bold">
+          70%
+        </h2>
+        <p class="text-sm text-[#65758B]">
+          New Business from Referrals
+        </p>
+      </div>
+
+      <!-- card 4 -->
+      <div class="p-6 bg-white border border-[#E8EAED] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8] transition-all duration-500 text-center">
+        <img src="./assets/stats-icon/iv.png" alt="stat icon" class="mx-auto w-16 h-16" />
+        <h2 class="text-[#F59E0B] mt-6 mb-3 text-2xl md:text-3xl lg:text-5xl font-bold">
+          4.8/5
+        </h2>
+        <p class="text-sm text-[#65758B]">
+          Client Satisfaction Rating
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- footer section starts here -->
+ <footer class="bg-[#0f1729] text-white">
+  <!-- Top area -->
+  <div class="container mx-auto px-6 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+      <!-- Logo & About -->
+      <div class="space-y-4 xl:col-span-2 text-center lg:text-left">
+        <div class="w-40 mx-auto lg:mx-0">
+          <a href="/">
+            <img
+              src="./assets/logo/logo.png"
+              alt="Footer Logo"
+              class="object-contain w-full"
+            />
+          </a>
+        </div>
+
+        <p class="text-white text-[16px] mt-6 mb-10 max-w-md mx-auto lg:mx-0">
+          Khan IT is a full-stack digital marketing agency in Bangladesh offering
+          complete online marketing, web design, and branding solutions.
+        </p>
+
+        <!-- Social Icons -->
+        <ul class="flex items-center gap-5 justify-center lg:justify-start mt-4">
+          <li><i class="fab fa-facebook-f text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"></i></li>
+          <li><i class="fab fa-instagram text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"></i></li>
+          <li><i class="fab fa-x-twitter text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"></i></li>
+          <li><i class="fab fa-linkedin-in text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"></i></li>
+          <li><i class="fab fa-youtube text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"></i></li>
+          <li><i class="fab fa-pinterest-p text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"></i></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="px-6 text-center lg:text-left">
+        <h3 class="text-lg md:text-xl font-semibold mb-6">Services</h3>
+        <ul class="space-y-3">
+          <li class="text-[#ffffff80] text-sm">SEO Service</li>
+          <li class="text-[#ffffff80] text-sm">Web Design</li>
+          <li class="text-[#ffffff80] text-sm">Facebook Ads</li>
+          <li class="text-[#ffffff80] text-sm">Google Ads</li>
+          <li class="text-[#ffffff80] text-sm">Content Writing</li>
+          <li class="text-[#ffffff80] text-sm">Branding</li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="text-center lg:text-left">
+        <h3 class="text-lg md:text-xl font-semibold mb-6">Company</h3>
+        <ul class="space-y-3">
+          <li class="text-[#ffffff80] text-sm">About Us</li>
+          <li class="text-[#ffffff80] text-sm">Case Studies</li>
+          <li class="text-[#ffffff80] text-sm">Blog</li>
+          <li class="text-[#ffffff80] text-sm">Contact</li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="text-center lg:text-left">
+        <h3 class="text-lg md:text-xl font-semibold mb-4">Contact</h3>
+        <ul class="text-[#ffffff80] text-sm space-y-3">
+          <li class="flex items-center justify-center lg:justify-start gap-5">
+            <i class="fas fa-map-marker-alt text-xl"></i>
+            <span class="text-white font-medium">Dhaka, Bangladesh</span>
+          </li>
+          <li class="flex items-center justify-center lg:justify-start gap-5">
+            <i class="fas fa-phone text-xl"></i>
+            <span class="text-white font-medium">+8801404992727</span>
+          </li>
+          <li class="flex items-center justify-center lg:justify-start gap-5">
+            <i class="fas fa-envelope text-xl"></i>
+            <a href="mailto:admin@khanit.com.bd" class="text-white font-medium">
+              admin@khanit.com.bd
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-gray-600">
+    <div class="container mx-auto px-6 py-6 flex justify-center">
+      <p class="text-gray-100 text-sm md:text-xl text-center">
+        © 2026 Khan IT. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!-- connecting js file with html -->
+    <script src="./Js/script.js"></script>
+  </body>
+</html>
