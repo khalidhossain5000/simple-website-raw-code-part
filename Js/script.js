@@ -34,7 +34,7 @@ chatModal.addEventListener("click", (e) => {
 chatForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Close modal
+  
   chatModal.classList.add("hidden");
   chatModal.classList.remove("flex");
 
@@ -48,3 +48,15 @@ chatForm.addEventListener("submit", function (e) {
 
   chatForm.reset();
 });
+
+
+// close chat
+closeChat.addEventListener('click',()=>{
+ chatModal.classList.add("hidden");
+})
+
+
+
+
+
+
