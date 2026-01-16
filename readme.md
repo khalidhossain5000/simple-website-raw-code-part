@@ -3,8 +3,7 @@
 
 ##  Summary
 This project is a simple website built using **HTML, CSS, and vanilla JavaScript** without any frameworks.  
-The main goal was to implement at least **two sections** (Hero Section + Content/Feature Section) and include **interactive elements** while ensuring a fully responsive layout.
-
+The main goal was to implement figma design into frontend layout and include **interactive elements** while ensuring a fully responsive layout.
 
 ## 🚀 Live Site
 https://simple-website-layout-with-rawcode.netlify.app/
