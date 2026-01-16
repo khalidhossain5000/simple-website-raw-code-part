@@ -14,9 +14,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
+<!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- sweetalert -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- css file -->
     <link rel="stylesheet" href="./style.css" />
+
   </head>
   <body class="inter">
     <!-- header and nav bar starts here -->
@@ -37,7 +47,7 @@
           <ul id="menu" class="flex flex-col lg:flex-row p-6 lg:p-0 gap-8">
             <li class="font-xl">Home</li>
             <li class="font-inter font-xl font-[400] flex items-center gap-1">
-              About
+              <a href="./about.html">About</a>
               <span
                 class="w-4 h-4 transition-transform group-hover:rotate-180 -mt-2"
                 ><i class="fa-solid fa-chevron-down"></i
@@ -49,7 +59,7 @@
           </ul>
         </nav>
         <div class="btn hidden lg:block">
-          <button class="btn-global hover:bg-red-900 transiton duration-300">
+          <button class="btn-global hover:bg-red-900 transition duration-300">
             <span><i class="fa-solid fa-phone"></i></span> +8801404552727
           </button>
         </div>
@@ -64,7 +74,7 @@
     <!-- Banner part of the section starts here -->
     <section>
       <section
-        class="min-h-screen bg-cover bg-center pt-36 pb-24 md:py-40 lg:pt-0 lg:py-48 px-2 lg:px-4"
+        class="min-h-screen bg-cover bg-center pt-36 pb-24 md:py-40  lg:py-48 px-2 lg:px-4"
         style="background-image: url('./assets/banner/section-bg.png')"
       >
         <div
@@ -451,7 +461,7 @@
         <!-- Badge -->
         <div class="text-center">
           <p
-            class="bg-[#0271E833] py-2 px-4 rounded-full text-[#060606] text-sm font-medium inline-block"
+            class="bg-[#0271E833] py-2 px-4 rounded-full text-[#0271E8] text-sm font-medium inline-block"
           >
             Our Services
           </p>
@@ -669,6 +679,64 @@
     </div>
   </div>
 </section>
+<!-- reach us floating form modal -->
+ <!-- Floating Chat Button -->
+<button
+  id="chatBtn"
+  class="fixed cursor-pointer bottom-6 right-6 bg-[#0271E8] text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center gap-2 z-50"
+>
+  <i class="fas fa-envelope text-xl"></i>
+  <span class="hidden md:inline font-semibold">Reach Us</span>
+</button>
+
+<!-- chat modal starts here -->
+ <!-- Chat Modal -->
+<div
+  id="chatModal"
+  class="fixed inset-0 bg-black/50 hidden justify-center items-center z-50"
+>
+  <div class="bg-white rounded-2xl w-full max-w-md p-6 relative">
+    <!-- Close Button -->
+    <button
+      id="closeChat"
+      class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+    >
+      <i class="fas fa-times text-xl"></i>
+    </button>
+
+    <h2 class="text-2xl font-bold mb-4 text-center">Contact Us</h2>
+
+    <!-- Form -->
+    <form id="chatForm" class="flex flex-col gap-4">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        required
+        class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+      ></textarea>
+      <button
+        type="submit"
+        class="bg-[#0271E8] text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>
 <!-- footer section starts here -->
  <footer class="bg-[#0f1729] text-white">
   <!-- Top area -->

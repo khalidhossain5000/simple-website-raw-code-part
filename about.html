@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About page of the website</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind cdn setup here -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome icon setup -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- css file -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+
+
+    <!-- Header and Navbar -->
+    <header
+      class="fixed left-0 w-full top-0 z-50 backdrop-blur-2xl bg-white/10"
+    >
+      <div class="container mx-auto flex items-center justify-between py-4">
+        <!-- Logo -->
+        <div class="logo">
+          <img
+            src="./assets/logo/logo.png"
+            alt="website logo"
+            class="w-40 lg:w-full"
+          />
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav
+          class="menu hidden lg:block absolute lg:static top-16 left-0 w-full lg:w-auto bg-blue-500 lg:bg-transparent max-h-0 opacity-0 transition duration-0 lg:max-h-full lg:opacity-100 lg:overflow-visible"
+          id="mobileMenu"
+        >
+          <ul id="menu" class="flex flex-col lg:flex-row p-6 lg:p-0 gap-8">
+            <li class="font-xl"><a href="./">Home</a></li>
+            <li class="font-inter font-xl font-[400] flex items-center gap-1">
+              <a href="./about.html">About</a>
+              <span
+                class="w-4 h-4 transition-transform group-hover:rotate-180 -mt-2"
+              >
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </li>
+            <li class="font-xl font-[400]">Services</li>
+            <li class="font-xl font-[400]">SEO Case Study</li>
+            <li class="font-xl font-[400]">Contact Us</li>
+          </ul>
+        </nav>
+
+        <!-- Desktop button -->
+        <div class="btn hidden lg:block">
+          <button class="btn-global hover:bg-red-900 transition duration-300">
+            <span><i class="fa-solid fa-phone"></i></span> +8801404552727
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="lg:hidden">
+          <button id="hamburger">
+            <i class="fa-solid fa-bars text-4xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section
+      class="min-h-screen bg-cover bg-center pt-40 pb-24 md:py-40 lg:pt-44 lg:pb-36 px-2 lg:px-4"
+      style="background-image: url('./assets/about/banner-bg.png')"
+    >
+      <div class="max-w-5xl mx-auto flex flex-col items-center justify-center">
+        <!-- Trusted partner badge -->
+        <div class="text-center inline-block">
+          <p
+            class="bg-[#F0F7FF] py-2 px-4 rounded-4xl text-[#0271E8E8] text-sm font-medium flex flex-col sm:flex-row items-center gap-2"
+          >
+            <i class="fas fa-medal text-[#0271E8E8]"></i>
+            Bangladesh’s Trusted Digital Partner Since 2017
+          </p>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="text-center mt-6 mb-12">
+          <h1
+            class="text-4xl md:text-6xl lg:text-5xl xl:text-[80px] dm-sans font-bold lg:font-extrabold text-[#060606]"
+          >
+            About <span class="text-[#0271E8E8]">Khan It</span>
+          </h1>
+          <p
+            class="text-[#65758B] font-normal font-inter text-sm xl:text-lg max-w-2xl mt-2 lg:mt-5 mx-auto lg:mx-0"
+          >
+            We’re more than a digital marketing agency. We’re your partner in
+            Bangladesh’s fast-changing digital landscape. Delivering measurable
+            growth through ethical, data-driven, and AI-powered strategies.
+          </p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+          <button
+            class="btn-global text-white py-3 px-6 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition"
+          >
+            Explore Our Services
+            <i class="fas fa-arrow-right text-xl"></i>
+          </button>
+
+          <button
+            class="py-3 px-6 border border-primary font-inter rounded-lg text-primary hover:bg-[#0271E8E8] hover:text-[#fff] transition duration-300 cursor-pointer"
+          >
+            View Case Studies
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div
+        class="max-w-250 mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-center justify-center pt-16"
+      >
+        <!-- Card 1 -->
+        <div
+          class="py-5 px-6 bg-white border border-[#E6F2FF] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center"
+        >
+          <div>
+            <img
+              class="mx-auto"
+              src="./assets/about/banner-iconi.png"
+              alt="baner-icon"
+            />
+          </div>
+          <h2
+            class="mt-6 mb-3 text-2xl md:text-3xl font-semibold lg:font-bold lg:text-[32px]"
+          >
+            200+
+          </h2>
+          <p class="text-sm text-[#65758B] font-regular">Business Served</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="py-5 px-6 bg-white border border-[#E6F2FF] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-[#0271E8E8] transition-all duration-500 text-center"
+        >
+          <div>
+            <img
+              class="text-center mx-auto"
+              src="./assets/about/banner-iconii.png"
+              alt="baner-icon"
+            />
+          </div>
+          <h2
+            class="mt-6 mb-3 text-2xl md:text-3xl font-semibold lg:font-bold lg:text-[32px]"
+          >
+            18
+          </h2>
+          <p class="text-sm text-[#65758B] font-regular">Industries Covered</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="py-5 px-6 bg-white border border-[#E6F2FF] shadow-sm rounded-[20px] hover:bg-[#f0f7ff] hover:border-primary transition-all duration-500 text-center"
+        >
+          <div>
+            <img
+              class="mx-auto"
+              src="./assets/about/banner-iconiii.png"
+              alt="baner-icon"
+            />
+          </div>
+          <h2
+            class="mt-6 mb-3 text-2xl md:text-3xl font-semibold lg:font-bold lg:text-[32px]"
+          >
+            95%
+          </h2>
+          <p class="text-sm text-[#65758B] font-regular">Client Satisfaction</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- info section start from here -->
+    <section class="py-6 lg:py-30 bg-[#ffffff] px-2 lg:px-4">
+      <div
+        class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-15"
+      >
+        <div class="flex-6">
+          <!-- Small badge -->
+          <div class="text-center lg:text-left">
+            <p
+              class="bg-[#F0F7FF] py-2 px-4 rounded-4xl text-[#0271E8E8] text-sm font-medium inline-block"
+            >
+              Who We Are
+            </p>
+          </div>
+
+          <!-- Main Title -->
+          <h2
+            class="mt-6 mb-5 text-[#060606] dm-sans text-3xl lg:text-5xl font-bold text-center lg:text-left"
+          >
+            Your Partner in Digital Transformation
+          </h2>
+
+          <!-- Description paragraphs -->
+          <p
+            class="text-center lg:text-left text-lg font-regular text-[#65758B]"
+          >
+            Founded in 2017 by Md Faruk Khan, Khan IT began with a single
+            purpose to help businesses in Bangladesh and beyond achieve
+            measurable growth through ethical, data-driven, and AI-powered
+            digital marketing.
+          </p>
+          <p
+            class="mt-5 text-center lg:text-left text-lg font-regular text-[#65758B]"
+          >
+            Our focus remains transparency, strategy, and sustainability. We
+            prioritize what matters—your visibility, leads, and long-term brand
+            authority. Over the years, we’ve supported 200+ businesses across 18
+            industries, from national brands like Walton Hi-Tech and HATIL
+            Furniture to fast-growing startups.
+          </p>
+
+          <!-- Achievements badges -->
+          <div class="achivment flex items-center gap-6 flex-wrap mt-10">
+            <!-- Card 1 -->
+            <p
+              class="bg-[#FFFBF0] py-2 px-4 rounded-4xl text-[#060606] text-[16px] font-medium flex items-center gap-2"
+            >
+              <span class="flex items-center gap-1 text-xl text-[#E89F02E8]">
+                <i class="fas fa-star text-[#E89F02E8]"></i> 4.9/5
+              </span>
+              On Clutch
+            </p>
+            <!-- Card 2 -->
+            <p
+              class="bg-[#F0F7FF] py-2 px-4 rounded-4xl text-[#060606] text-[16px] font-medium flex items-center gap-2"
+            >
+              <img src="./assets/about/certifcate.png" alt="info icon" /> Google
+              Certified
+            </p>
+            <!-- Card 3 -->
+            <p
+              class="bg-[#F0F7FF] py-2 px-4 rounded-4xl text-[#060606] text-[16px] font-medium flex items-center gap-2"
+            >
+              <img src="./assets/about/xperince.png" alt="info icon" /> 10+
+              Years Experience
+            </p>
+          </div>
+        </div>
+
+        <!-- Right side: Info Cards -->
+        <div class="flex-5">
+          <!-- Card 1 -->
+          <div
+            class="p-6 bg-[#FFFCFA] border border-[#FFEADB] rounded-[20px] my-8"
+          >
+            <div class="flex flex-col md:flex-row items-center gap-6">
+              <img src="./assets/about/info-iconi.png" alt="" />
+              <div>
+                <h3 class="text-[#060606] text-lg font-semibold">
+                  Data-Driven Strategies
+                </h3>
+                <p class="text-[#65758B] text-[16px] font-regular pt-2">
+                  Every campaign is grounded in research and analytics ensuring
+                  measurable outcomes and ROI.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="p-6 bg-[#F5FDFF] border border-[#CCF7FF] rounded-[20px] my-8"
+          >
+            <div class="flex flex-col md:flex-row items-center gap-6">
+              <img src="./assets/about/info-iconii.png" alt="" />
+              <div>
+                <h3 class="text-[#060606] text-lg font-semibold">
+                  AI-Powered Innovation
+                </h3>
+                <p class="text-[#65758B] text-[16px] font-regular pt-2">
+                  We leverage cutting-edge AI tools for keyword analysis,
+                  automation, and predictive insights.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="p-6 bg-[#F5FFFB] border border-[#CCFFEA] rounded-[20px] my-8"
+          >
+            <div class="flex flex-col md:flex-row items-center gap-6">
+              <img src="./assets/about/info-iconiii.png" alt="" />
+              <div>
+                <h3 class="text-[#060606] text-lg font-semibold">
+                  Ethical Practices
+                </h3>
+                <p class="text-[#65758B] text-[16px] font-regular pt-2">
+                  100% white-hat SEO with no shortcuts. We build growth that
+                  lasts and protects your brand.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <!-- footer section starts here -->
+    <footer class="bg-[#0f1729] text-white">
+      <!-- Top area -->
+      <div class="container mx-auto px-6 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Logo & About -->
+          <div class="space-y-4 xl:col-span-2 text-center lg:text-left">
+            <div class="w-40 mx-auto lg:mx-0">
+              <a href="/">
+                <img
+                  src="./assets/logo/logo.png"
+                  alt="Footer Logo"
+                  class="object-contain w-full"
+                />
+              </a>
+            </div>
+
+            <p
+              class="text-white text-[16px] mt-6 mb-10 max-w-md mx-auto lg:mx-0"
+            >
+              Khan IT is a full-stack digital marketing agency in Bangladesh
+              offering complete online marketing, web design, and branding
+              solutions.
+            </p>
+
+            <!-- Social Icons -->
+            <ul
+              class="flex items-center gap-5 justify-center lg:justify-start mt-4"
+            >
+              <li>
+                <i
+                  class="fab fa-facebook-f text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="fab fa-instagram text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="fab fa-x-twitter text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="fab fa-linkedin-in text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="fab fa-youtube text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="fab fa-pinterest-p text-2xl hover:text-[#0271E8E8] transition duration-500 cursor-pointer"
+                ></i>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="px-6 text-center lg:text-left">
+            <h3 class="text-lg md:text-xl font-semibold mb-6">Services</h3>
+            <ul class="space-y-3">
+              <li class="text-[#ffffff80] text-sm">SEO Service</li>
+              <li class="text-[#ffffff80] text-sm">Web Design</li>
+              <li class="text-[#ffffff80] text-sm">Facebook Ads</li>
+              <li class="text-[#ffffff80] text-sm">Google Ads</li>
+              <li class="text-[#ffffff80] text-sm">Content Writing</li>
+              <li class="text-[#ffffff80] text-sm">Branding</li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="text-center lg:text-left">
+            <h3 class="text-lg md:text-xl font-semibold mb-6">Company</h3>
+            <ul class="space-y-3">
+              <li class="text-[#ffffff80] text-sm">About Us</li>
+              <li class="text-[#ffffff80] text-sm">Case Studies</li>
+              <li class="text-[#ffffff80] text-sm">Blog</li>
+              <li class="text-[#ffffff80] text-sm">Contact</li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="text-center lg:text-left">
+            <h3 class="text-lg md:text-xl font-semibold mb-4">Contact</h3>
+            <ul class="text-[#ffffff80] text-sm space-y-3">
+              <li
+                class="flex items-center justify-center lg:justify-start gap-5"
+              >
+                <i class="fas fa-map-marker-alt text-xl"></i>
+                <span class="text-white font-medium">Dhaka, Bangladesh</span>
+              </li>
+              <li
+                class="flex items-center justify-center lg:justify-start gap-5"
+              >
+                <i class="fas fa-phone text-xl"></i>
+                <span class="text-white font-medium">+8801404992727</span>
+              </li>
+              <li
+                class="flex items-center justify-center lg:justify-start gap-5"
+              >
+                <i class="fas fa-envelope text-xl"></i>
+                <a
+                  href="mailto:admin@khanit.com.bd"
+                  class="text-white font-medium"
+                >
+                  admin@khanit.com.bd
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-gray-600">
+        <div class="container mx-auto px-6 py-6 flex justify-center">
+          <p class="text-gray-100 text-sm md:text-xl text-center">
+            © 2026 Khan IT. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
